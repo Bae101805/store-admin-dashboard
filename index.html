@@ -69,19 +69,19 @@
                 </div>
                 <div class="relative z-10">
                     <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur text-white border border-white/30 mb-4 shadow-sm">
-                        <i class="fa-solid fa-key text-[10px]"></i> Main Entrance
+                        <i class="fa-solid fa-key text-[10px]"></i> Admin Dashboard Login
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-3 drop-shadow-sm">Admin Dashboard Login (`wp-admin`)</h2>
+                    <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-3 drop-shadow-sm">`wp-admin` Control Center</h2>
                     <p class="text-rose-100 text-sm sm:text-base max-w-3xl font-medium leading-relaxed">
-                        Welcome to your vintage control center! Manage incoming orders, stock levels, sales analytics, aesthetic layouts, and customer care below.
+                        Your complete vintage storefront workflow. Manage all 5 core operational departments below, from order fulfillment to customer care!
                     </p>
                 </div>
             </div>
 
-            <!-- Dashboard Grid -->
+            <!-- Dashboard Grid (All 5 Original Sections Restored) -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Card 1: Orders -->
+                <!-- 1. Orders Management -->
                 <div class="bg-white rounded-2xl overflow-hidden border border-rose-200/80 shadow-xl shadow-rose-500/5 flex flex-col justify-between hover:shadow-2xl hover:border-rose-400 transition-all duration-300 group">
                     <div>
                         <div class="store-awning"></div>
@@ -90,11 +90,75 @@
                                 <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </div>
-                                <span class="text-xs font-extrabold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200">Module 01</span>
+                                <span class="text-xs font-extrabold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200">Section 01</span>
                             </div>
                             <h3 class="text-lg font-bold text-rose-950 mb-1 group-hover:text-rose-600 transition-colors">Orders Management</h3>
                             <p class="text-xs text-rose-400 font-mono mb-4">WooCommerce > Orders</p>
                             
                             <ul class="space-y-3 text-sm text-rose-900/80 mb-6">
                                 <li class="flex items-start gap-2.5">
-                                    <i class
+                                    <i class="fa-solid fa-check text-rose-500 mt-1 shrink-0"></i>
+                                    <span>View incoming customer orders, shipping addresses, and payment status.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-arrow-right text-pink-500 mt-1 shrink-0"></i>
+                                    <span><strong>Action:</strong> Export address data to Pirate Ship to print shipping labels.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-rose-50/50 border-t border-rose-100 flex items-center justify-between text-xs font-medium text-rose-600">
+                        <span>Fulfillment & Shipping</span>
+                        <i class="fa-solid fa-truck-fast text-rose-500"></i>
+                    </div>
+                </div>
+
+                <!-- 2. Inventory & Product Catalog -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-rose-200/80 shadow-xl shadow-rose-500/5 flex flex-col justify-between hover:shadow-2xl hover:border-rose-400 transition-all duration-300 group">
+                    <div>
+                        <div class="store-awning"></div>
+                        <div class="p-6 pt-7">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+                                </div>
+                                <span class="text-xs font-extrabold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200">Section 02</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-rose-950 mb-1 group-hover:text-rose-600 transition-colors">Inventory & Catalog</h3>
+                            <p class="text-xs text-rose-400 font-mono mb-4">WooCommerce > Products</p>
+                            
+                            <ul class="space-y-3 text-sm text-rose-900/80 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-rose-500 mt-1 shrink-0"></i>
+                                    <span>Add new products, write descriptions, set prices, and upload images.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-bell text-amber-500 mt-1 shrink-0"></i>
+                                    <span>Track stock levels (e.g., getting alerts when an item is low in stock).</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-rose-50/50 border-t border-rose-100 flex items-center justify-between text-xs font-medium text-rose-600">
+                        <span>Catalog & Stock</span>
+                        <i class="fa-solid fa-tags text-rose-500"></i>
+                    </div>
+                </div>
+
+                <!-- 3. Financials & Analytics -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-rose-200/80 shadow-xl shadow-rose-500/5 flex flex-col justify-between hover:shadow-2xl hover:border-rose-400 transition-all duration-300 group">
+                    <div>
+                        <div class="store-awning"></div>
+                        <div class="p-6 pt-7">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <span class="text-xs font-extrabold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-lg border border-rose-200">Section 03</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-rose-950 mb-1 group-hover:text-rose-600 transition-colors">Financials & Analytics</h3>
+                            <p class="text-xs text-rose-400 font-mono mb-4">WooCommerce > Analytics</p>
+                            
+                            <ul class="space-y-3 text-sm text-rose-900/80 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-check text-
