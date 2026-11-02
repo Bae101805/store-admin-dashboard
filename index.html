@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Admin Dashboard Workflow</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="h-full font-sans text-slate-100 antialiased selection:bg-indigo-500 selection:text-white">
+    <div class="min-h-full flex flex-col">
+        
+        <!-- Header -->
+        <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-indigo-600 p-2.5 rounded-xl shadow-lg shadow-indigo-500/30">
+                        <i class="fa-solid fa-gauge-high text-xl text-white"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold tracking-tight text-white">Store Admin Portal</h1>
+                        <p class="text-xs text-slate-400">WooCommerce Operations & Management Guide</p>
+                    </div>
+                </div>
+                <div class="hidden sm:flex items-center space-x-2 bg-slate-900/60 px-3 py-1.5 rounded-full border border-slate-700 text-xs font-medium text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>System Status: Online (wp-admin)</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            
+            <!-- Hero / Gateway Card -->
+            <div class="mb-10 bg-gradient-to-r from-indigo-900/50 via-slate-800 to-slate-800 border border-indigo-500/30 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 text-indigo-500/10 text-9xl pointer-events-none">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="relative z-10">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mb-3">
+                        <i class="fa-solid fa-key text-[10px]"></i> Entry Point
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-2">Admin Dashboard Login (`wp-admin`)</h2>
+                    <p class="text-slate-300 text-sm sm:text-base max-w-3xl">
+                        Your central command center for managing orders, products, analytics, site aesthetics, and customer support. Choose a module below to view operational workflows.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Orders -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300 shadow-lg group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md">Module 01</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1 group-hover:text-blue-300 transition-colors">Orders Management</h3>
+                        <p class="text-xs text-slate-400 font-mono mb-4">WooCommerce > Orders</p>
+                        
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-blue-400 mt-1 shrink-0"></i>
+                                <span>View incoming customer orders, shipping addresses, and payment status.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-arrow-right text-indigo-400 mt-1 shrink-0"></i>
+                                <span><strong>Action:</strong> Export address data to Pirate Ship to print shipping labels.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
+                        <span>Fulfillment & Shipping</span>
+                        <i class="fa-solid fa-truck-fast text-blue-400"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: Inventory -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300 shadow-lg group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
+                                <i class="fa-solid fa-boxes-stacked text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md">Module 02</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">Inventory & Product Catalog</h3>
+                        <p class="text-xs text-slate-400 font-mono mb-4">WooCommerce > Products</p>
+                        
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                                <span>Add new products, write descriptions, set prices, and upload images.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-bell text-amber-400 mt-1 shrink-0"></i>
+                                <span>Track stock levels (e.g., getting alerts when an item is low in stock).</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
+                        <span>Catalog & Stock</span>
+                        <i class="fa-solid fa-tags text-emerald-400"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3: Financials -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300 shadow-lg group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                                <i class="fa-solid fa-chart-line text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md">Module 03</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">Financials & Analytics</h3>
+                        <p class="text-xs text-slate-400 font-mono mb-4">WooCommerce > Analytics</p>
+                        
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-purple-400 mt-1 shrink-0"></i>
+                                <span>Track total sales, revenue trends, top-selling items, and customer data.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-wallet text-indigo-400 mt-1 shrink-0"></i>
+                                <span>Check Stripe/PayPal dashboards to see payouts transferred to your bank.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
+                        <span>Revenue & Payouts</span>
+                        <i class="fa-solid fa-credit-card text-purple-400"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4: Store Settings -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300 shadow-lg group">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors">
+                                <i class="fa-solid fa-paintbrush text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-md">Module 04</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">Store Settings & Design</h3>
+                        <p class="text-xs text-slate-400 font-mono mb-4">Appearance / WooCommerce Settings</p>
+                        
+                        <ul class="space-y-2.5 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-check text-amber-400 mt-1 shrink-0"></i>
+                                <span>Update your site theme, menus, banners, and homepage layouts.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-gears text-indigo-400 mt-1 shrink-0"></i>
+                                <span>Configure tax rates, shipping zones, and connected payment gateways.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
+                        <span>Design & Configuration</span>
+                        <i class="fa-solid fa-sliders text-amber-400"></i>
+                    </div>
+                </div>
+
+                <!-- Card 5: Content & Customer Care -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition-all duration-300 shadow-lg group md:col-span-2 lg:col-span-2">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center group-hover:bg-rose-500/20 transition-colors">
+                                <i class="fa-solid fa-headset text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-rose-400 bg-rose-500/10 px-2.5 py-1 rounded-md">Module 05</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1 group-hover:text-rose-300 transition-colors">Content & Customer Care</h3>
+                        <p class="text-xs text-slate-400 font-mono mb-4">Pages / Contact Plugin</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-300 mb-6">
+                            <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-700/50">
+                                <div class="font-semibold text-rose-300 mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-file-lines text-xs"></i> Static Content
+                                </div>
+                                <p class="text-xs text-slate-400">Edit your "About Us", "FAQ", and legal policy pages easily.</p>
+                            </div>
+                            <div class="bg-slate-900/50 p-3.5 rounded-xl border border-slate-700/50">
+                                <div class="font-semibold text-rose-300 mb-1 flex items-center gap-2">
+                                    <i class="fa-solid fa-comments text-xs"></i> Support Inquiries
+                                </div>
+                                <p class="text-xs text-slate-400">Answer direct support inquiries submitted through your Contact form.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-400">
+                        <span>Support & Policies</span>
+                        <i class="fa-solid fa-heart text-rose-400"></i>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-800 border-t border-slate-700 py-6 mt-12 text-center text-xs text-slate-400">
+            <p>E-Commerce Management Dashboard &bull; Powered by WordPress & WooCommerce</p>
+        </footer>
+
+    </div>
+</body>
+</html>
