@@ -1,0 +1,10 @@
+# E-Commerce Admin Dashboard Guide
+
+An interactive, responsive reference guide and dashboard overview for managing a WordPress/WooCommerce e-commerce store, fulfillment, financials, and customer care.
+
+## 🚀 Live Demo
+Once hosted on GitHub Pages, team members and administrators can easily reference this live workflow guide from any device.
+
+## 📁 Repository Structure
+- `index.html` - The main interactive dashboard web page.
+- `README.md` - Documentation and setup instructions.
