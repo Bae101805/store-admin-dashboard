@@ -1,4 +1,33 @@
-<!DOCTYPE html>
+<function display_philly_phoenix_products() {
+    $args = array(
+        'post_type'      => 'product',
+        'posts_per_page' => 12,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    );
+    
+    $loop = new WP_Query( $args );
+    
+    if ( $loop->have_posts() ) {
+        echo '<div class="philly-phoenix-product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">';
+        while ( $loop->have_posts() ) : $loop->the_post();
+            global $product;
+            echo '<div class="product-card" style="border: 1px solid #e0d4e0; padding: 15px; border-radius: 8px; background: #fff0f5;">';
+            if ( has_post_thumbnail() ) {
+                echo '<div class="product-image">' . get_the_post_thumbnail( $loop->post->ID, 'medium' ) . '</div>';
+            }
+            echo '<h3 style="color: #6a4c93;"><a href="' . get_permalink() . '" style="text-decoration: none; color: inherit;">' . get_the_title() . '</a></h3>';
+            echo '<div class="price" style="font-weight: bold; color: #b56576; margin-bottom: 10px;">' . $product->get_price_html() . '</div>';
+            echo '<a href="' . esc_url( $product->add_to_cart_url() ) . '" class="button" style="background: #b56576; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; display: inline-block;">Add to Cart</a>';
+            echo '</div>';
+        endwhile;
+        echo '</div>';
+        wp_reset_postdata();
+    } else {
+        echo '<p>No products found in the shop right now.</p>';
+    }
+}
+add_shortcode( 'philly_products', 'display_philly_phoenix_products' );!DOCTYPE html>
 <html lang="en" class="h-full bg-purple-50">
 <head>
     <meta charset="UTF-8">
